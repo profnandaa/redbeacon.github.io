@@ -1,36 +1,5 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Redbeacon Engineering</title>
-    <meta charset="utf-8">
-    <!-- webfont in the head so that we don't flash unstyled text. -->
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script><script>
-      WebFont.load({
-        custom: {
-          families: [
-            'Avenir Book',
-            'Avenir Heavy'
-          ],
-          urls: [ '//redbeacon.com/media/light/fonts.css' ]
-        }
-      });
-    </script>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Avenir"
-      }
-    </style>
-  </head>
-  <div class="container">
+{% include header.html %}
+<div class="container">
     {{ content }}
-  </div>
-</body>
-</html>
+</div>
+{% include footer.html %}
