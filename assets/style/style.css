@@ -1,0 +1,116 @@
+html, body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Avenir";
+  color: #222222 !important; }
+
+h1 a {
+  color: #222222 !important; }
+
+h2 {
+  margin: 40px 0px 20px 0px; }
+
+h3 {
+  margin: 30px 0px 20px 0px; }
+
+a {
+  text-decoration: none !important; }
+
+p {
+  margin-bottom: 25px; }
+
+.table-container {
+  max-width: 700px !important;
+  overflow-y: scroll; }
+
+@media (max-width: 1040px) {
+  blockquote {
+    border: none; } }
+
+.container {
+  font-size: 17px;
+  line-height: 28px;
+  position: relative; }
+  @media (min-width: 700px) {
+    .container {
+      max-width: 700px; } }
+
+.blog-title {
+  font-weight: bold; }
+
+.comments-title {
+  text-decoration: none !important;
+  color: #222222 !important;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0px;
+  margin-bottom: 30px !important; }
+
+.excerpt-container {
+  position: relative !important; }
+  .excerpt-container * {
+    color: #222222 !important; }
+
+.post-title {
+  text-decoration: none !important;
+  color: #222222 !important;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0px;
+  margin-bottom: 30px !important; }
+
+.post-info {
+  text-align: center;
+  float: left;
+  margin-right: 20px !important;
+  line-height: 20px; }
+  .post-info .word-count {
+    margin-top: 10px; }
+  .post-info * {
+    font-size: 15px;
+    color: #999999 !important; }
+  @media (min-width: 1040px) {
+    .post-info {
+      position: absolute;
+      top: 0px;
+      left: -200px;
+      width: 180px; } }
+  .post-info .author-avatar img {
+    max-width: 60px !important; }
+
+.post-content img {
+  margin: 20px 0px;
+  width: 100% !important; }
+.post-content iframe {
+  width: 100% !important; }
+  @media (min-width: 700px) {
+    .post-content iframe {
+      height: 420px !important; } }
+  @media (max-width: 700px) {
+    .post-content iframe {
+      height: 380px !important; } }
+  @media (max-width: 550px) {
+    .post-content iframe {
+      height: 340px !important; } }
+  @media (max-width: 400px) {
+    .post-content iframe {
+      height: 240px !important; } }
+.post-content .img-info {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 14px; }
+
+.post-separator {
+  margin: 50px 0px; }
+
+pre {
+  margin: 30px 0px; }
+
+.fact {
+  font-size: 28px;
+  line-height: 45px; }
+
+.semi-bold {
+  font-weight: 600; }
+
+.giant-labels label {
+  font-size: 20px;
+  line-height: 45px; }

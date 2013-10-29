@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Redbeacon - {{ page.title }}</title>
+    <title>{{ page.title }}</title>
     <meta charset="utf-8">
-    <!-- webfont in the head so that we don't flash unstyled text. -->
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script><script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script>
       WebFont.load({
         custom: {
           families: [
@@ -16,24 +16,11 @@
       });
     </script>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Avenir"
-      }
-      .container { width: 700px; font-size: 17px; line-height: 28px }
-      .post-separator { margin: 50px }
-      .post-info { margin-bottom: 30px }
-      pre { margin: 30px 0px }
-    </style>
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <link rel="stylesheet" href="/assets/style/pygments_default.css">
   </head>
   <body>
     <div class="container">
-        <a href="/"><h1>{{ site.title }}</h1></a>
-        <hr>
+      <h1 class="blog-title"><a href="/" class="">{{ site.title }}</a></h1>
+    </div>
+    <hr>

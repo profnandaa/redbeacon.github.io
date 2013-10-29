@@ -1,13 +1,44 @@
+---
+comments: true
+---
+
 {% include header.html %}
 <div class="container">
-  <h1>{{ page.title }}</h1>
-  <p class="post-info">
-    <span class="word-count">{{ page.content | number_of_words }} words written by</span>
-    <span class="author">{{ page.author }} on</span>
-    <span class="date">{{ page.date | date_to_string }}</span>
-  </p>
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-info">
+    <div class="author-avatar">
+      <img class="img-circle" title="{{ page.author }}" src="{{ page.author_avatar }}">
+    </div>
+    <div class="word-count">{{ content | number_of_words }} words written</div>
+    <div class="author">by {{ page.author }}</div>
+    <div class="date">on {{ page.date | date_to_string}}</div>
+    <!--span class="tags">{{ tags | join: ', ' }}</span> | -->
+  </div>
+
   <div class="post-content">
-    {{ page.content }}
+    {{ content }}
+  </div>
+
+  <div class="comments">
+     {% if page.comments %}
+        <br>
+        <h1 class="comments-title">Let us know what you think!</h1>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'redbeacon';
+                //var disqus_developer = 1;
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+     {% endif %}
   </div>
 </div>
-{% include footer.html %} 
+{% include footer.html %}

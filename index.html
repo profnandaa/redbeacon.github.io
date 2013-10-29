@@ -5,18 +5,24 @@ title: Redbeacon Blog
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="post-info">
-    <span class="word-count">{{ post.content | number_of_words }} words written by</span>
-    <span class="author">{{ post.author }} on</span>
-    <span class="date">{{ post.date | date_to_string}}</span> 
-    <!--span class="tags">{{ post.tags | join: ', ' }}</span> | --> 
-  </p>
-  <div class="post-content">
-    {{ post.excerpt }}
-    <a href="{{ post.url }}">Read more...</a>
+  <div class="excerpt-container">
+    <a href="{{ post.url }}">
+      <h1 class="post-title">{{ post.title }}</h1>
+
+      <div class="post-info">
+        <div class="author-avatar">
+          <img class="img-circle" title="{{ post.author }}" src="{{ post.author_avatar }}">
+        </div>
+        <div class="word-count">{{ post.content | number_of_words }} words written</div>
+        <div class="author">by {{ post.author }}</div>
+        <div class="date">on {{ post.date | date_to_string}}</div>
+        <!--span class="tags">{{ tags | join: ', ' }}</span> | -->
+      </div>
+
+      <div>{{ post.excerpt }}</div>
+    </a>
   </div>
-  <div class="post-separator"></div>
+  <hr class="post-separator">
 {% endfor %}
 
 <!-- Pagination links -->

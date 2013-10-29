@@ -1,8 +1,9 @@
 ---
 layout: post
-title: The Title Would Be Hello World If We Weren't Aiming Higher
+title: "The Title Would Be Hello World If We Weren't Aiming Higher"
 author: Renan Cakirerk
-excerpt: "Great news folks! We've decided to create a tech blog for spreading our passion and love for making incredible apps
+author_avatar: http://www.redbeacon.com/media/about/images/Renan.jpg
+excerpt: "Great news folks! We've decided to create a product engineering blog for spreading our passion and love for making incredible apps
           with anyone who is interested in building great products.
           Our engineers, designers and product managers are eager and excited to share their ideas and experiences."
 ---
@@ -11,8 +12,9 @@ excerpt: "Great news folks! We've decided to create a tech blog for spreading ou
   <p class="lead"> Making the simple complicated is commonplace; making the complicated simple, awesomely simple, that's creativity.</p>
   <small>Charles Mingus</small>
 </blockquote>
+
 <p>
-Great news folks! We've decided to create a tech blog for spreading our passion and love for making incredible apps
+Great news folks! We've decided to create a product engineering blog for spreading our passion and love for making incredible apps
 with anyone who is interested in building great products.
 Our engineers, designers and product managers are eager and excited to share their ideas and experiences.
 </p>
@@ -26,9 +28,10 @@ Speaking of our engineers, we think this is a great opportunity for contributing
 Since this is our first blog post, let us take you on a short tour to see around.
 </p>
 
-<h3>Wait, what is Redbeacon again?</h3>
+<h2>Wait, what is Redbeacon again?</h2>
 
-<img width="700px" src="/assets/tardis.png">
+<img src="/assets/tardis.png">
+
 <p>
 Remember <a href="http://en.wikipedia.org/wiki/TARDIS" target="_blank">Dr. Who's TARDIS</a>? If not, it's just a simple box
 from outside that is actually a time machine and spacecraft that is <strong>way bigger</strong> from the inside, which is
@@ -44,11 +47,13 @@ In case you've landed on this page wondering what we do: Redbeacon is an awesome
 <p>
 Illustrations are always better than words:
 </p>
+
 <div>
   <img src="/assets/rb-1.jpg">
   <img src="/assets/rb-2.jpg">
   <img src="/assets/rb-3.jpg">
   <img src="/assets/rb-4.jpg">
+  <div class="img-info">Illustrations by Gamze Karayilanoglu</div>
 </div>
 
 <p>
@@ -79,7 +84,8 @@ Oh, by the way, if you're only interested in learning <strong>how much the job w
 <a href="http://redbeacon.com/price-estimator" target="_blank">price estimator</a> tool for that, too.
 </p>
 
-<h3>I know kung fu. What should I expect from this blog?</h3>
+<h2>I know kung fu. What should I expect from this blog?</h2>
+
 <p>
 Our engineering team have lots of things to share: best practices, code snippets, failures, experiments, optimizations, statistics,
 problems and solutions...
@@ -92,7 +98,7 @@ would love to share.
 Before moving on to most fun part, here are some keywords related to our technology stack:
 </p>
 
-<p class="text-center">
+<p class="text-center giant-labels">
 <label class="label label-info">python</label>
 <label class="label label-info">django</label>
 <label class="label label-info">twitter-bootstrap</label>
@@ -109,18 +115,17 @@ Before moving on to most fun part, here are some keywords related to our technol
 <label class="label label-info">selenium</label>
 </p>
 
-
-<h3>Talk is cheap. Show me the numbers.</h3>
+<h2>Talk is cheap. Show me the numbers.</h2>
 
 <p>
 Numbers are always fun (nerd alert). I've put some numbers together for seeing the big picture even clearer.
-<div class="text-center numbers"><span class="large">14</span> engineers in the US</div>
-<div class="text-center numbers"><span class="large">5</span> engineers internationally</div>
-<div class="text-center numbers"><span class="large">5</span> Nerf guns with hundreds of bullets</div>
+<div class="text-center fact"><span class="semi-bold">14</span> engineers in the US</div>
+<div class="text-center fact"><span class="semi-bold">5</span> engineers internationally</div>
+<div class="text-center fact"><span class="semi-bold">10</span> Nerf guns with hundreds of bullets</div>
 
 <br>
 Having developers outside the US gives us the advantage of receiving commits every hour of the day, generating this incredible punchcard.<br>
-<img src="/assets/punchcard.png" width="700">
+<img src="/assets/punchcard.png">
 </p>
 
 <p>
@@ -129,43 +134,36 @@ We have <strong>Hacking Fridays</strong> completely dedicated to bug fixing,
 unit tests and selenium tests. Hacking Fridays are really fun and challenging; engineers are divided into several teams and there is an
 insane competition where we hold a record for fixing <span class="medium">152 bugs</span> in one day!
 
-<br><br>OK back to more numbers:
-<div class="text-center numbers"><span class="large">277,608</span> lines of <span class="large">Python</span></div>
-<div class="text-center numbers"><span class="large">25,416</span> lines of <span class="large">Java</span> for Android</div>
-<div class="text-center numbers"><span class="large">50,980</span> lines of <span class="large">Objective C</span> for iOS</div>
-<div class="text-center numbers"><span class="large">70,779</span> lines of <span class="large">Javascript</span></div>
-<div class="text-center numbers"><span class="large">38,057</span> lines of <span class="large">Sass</span></div>
-<div class="text-center numbers"><span class="large">42,330</span> lines of <span class="large">CSS</span></div>
-<div class="text-center numbers"><span class="large">185,715</span> lines of <span class="large">HTML</span></div>
+<br>
+OK back to more numbers:
+<div class="text-center fact"><span class="semi-bold">277,608</span> lines of <span class="semi-bold">Python</span></div>
+<div class="text-center fact"><span class="semi-bold">25,416</span> lines of <span class="semi-bold">Java</span> for Android</div>
+<div class="text-center fact"><span class="semi-bold">50,980</span> lines of <span class="semi-bold">Objective C</span> for iOS</div>
+<div class="text-center fact"><span class="semi-bold">70,779</span> lines of <span class="semi-bold">Javascript</span></div>
+<div class="text-center fact"><span class="semi-bold">38,057</span> lines of <span class="semi-bold">Sass</span></div>
+<div class="text-center fact"><span class="semi-bold">42,330</span> lines of <span class="semi-bold">CSS</span></div>
+<div class="text-center fact"><span class="semi-bold">185,715</span> lines of <span class="semi-bold">HTML</span></div>
+<br>
 If anyone's wondering, 3rd party applications, libraries and frameworks are not included.
 </p>
 
-
-<h3>What's your office like?</h3>
+<h2>What's your office like?</h2>
 <p>
 So far I've tried to explain what this blog is about, what we do, mentioned about our building blocks and tried to
 give hints about how our culture is. Ready to see how our office looks like? Watch our video:
 </p>
 <p>
-<iframe width="700" height="420" ng-src="http://www.youtube.com/embed/YK1xbJjKYXw?rel=0" frameborder="0" allowfullscreen="" src="http://www.youtube.com/embed/YK1xbJjKYXw?rel=0"></iframe>
+<iframe frameborder="0" allowfullscreen="" src="http://www.youtube.com/embed/YK1xbJjKYXw?rel=0"></iframe>
 </p>
 
-<h3>Erm... I think I've left the stove on</h3>
+<h2>Erm... I think I've left the stove on</h2>
 <p>
 OK I know this is getting longer than what you would expect from an introduction post but like I said, we have lots of things to share.
 I think I'll stop writing at this point and save my words for another article. On your way out don't forget to check out our
 <a href="http://www.redbeacon.com/about/jobs/" target="_blank">job opportunities</a>.
 </p>
 <p>
-SPOILER ALERT!!! Our next article will be about Machine Learning.
+SPOILER ALERT!!! Our next article will be about Database Locks.
 </p>
 
-<img src="/assets/cat-sees-the-end.jpg" width="700">
-
-<hr>
-<div class="pull-right">Posted by Renan Cakirerk</div>
-<div class="clearfix"></div>
-
-<div class="pull-right">Illustrations by Gamze Karayilanoglu</div>
-<div class="clearfix"></div>
-<hr>
+<img src="/assets/cat-sees-the-end.jpg">
