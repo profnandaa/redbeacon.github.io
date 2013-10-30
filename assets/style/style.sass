@@ -2,18 +2,15 @@ body
   min-width: 380px
   max-width: 100%
 
-body *
-  -webkit-font-smoothing: antialiased
+html, body
+  *
+    font-family: "Avenir", Helvetica, Arial, sans-serif
+    -webkit-font-smoothing: antialiased
 
-html, body, h1, h2, h3, h4, h5, h6
-  font-family: "Avenir", Helvetica, Arial, sans-serif
-  color: #222 !important
 
 h1, h2, h3, h4, h5, h6
-  font-weight: 700 !important
-
-h1 a
-  color: #222 !important
+  font-family: "Avenir-heavy", Helvetica, Arial, sans-serif !important
+  font-weight: normal
 
 h2
   margin: 40px 0px 20px 0px
@@ -30,6 +27,8 @@ p
   margin-bottom: 25px
 
 .table-container
+  *
+    font-size: 14px !important
   max-width: 700px !important
   overflow-y: scroll
 
@@ -96,14 +95,10 @@ p
   display: inline-block
   vertical-align: top
 
-  h4
-    font-weight: bold
-
 .comments-title
   text-decoration: none !important
   color: #222 !important
   font-size: 28px
-  font-weight: 700
   margin: 0px
   margin-bottom: 30px !important
 
@@ -114,9 +109,7 @@ p
 
 .post-title
   text-decoration: none !important
-  color: #222 !important
   font-size: 28px
-  font-weight: 700
   margin: 0px
   margin-bottom: 30px !important
 
@@ -193,8 +186,9 @@ pre
   font-size: 28px
   line-height: 45px
 
-.semi-bold
-  font-weight: 600
+b, strong, .semi-bold
+  font-family: "Avenir-heavy", Helvetica, Arial, sans-serif !important
+  font-weight: normal !important
 
 .giant-labels
   label
@@ -203,3 +197,15 @@ pre
 
 #footer
   margin-bottom: 30px
+
+.lead
+  font-size: 20px !important
+
+code, pre
+  border-radius: 3px !important
+  border: none !important
+
+  *
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace !important
+    font-size: 13px !important
+    line-height: 25px !important
