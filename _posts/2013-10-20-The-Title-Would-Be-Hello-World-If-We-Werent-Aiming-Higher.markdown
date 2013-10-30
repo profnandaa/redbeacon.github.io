@@ -163,7 +163,7 @@ I think I'll stop writing at this point and save my words for another article. O
 <a href="http://www.redbeacon.com/about/jobs/" target="_blank">job opportunities</a>.
 </p>
 <p>
-SPOILER ALERT!!! Our next article will be about Database Locks.
+SPOILER ALERT!!! Our next article will be about Database Deadlocks.
 </p>
 
 <img src="/assets/cat-sees-the-end.jpg">
