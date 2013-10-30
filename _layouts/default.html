@@ -1,5 +1,18 @@
-{% include header.html %}
-<div class="container">
-    {{ content }}
-</div>
-{% include footer.html %}
+<!doctype html>
+<html lang="en">
+  {% include header.html %}
+  <body>
+    <div id="banner">
+      <a href="/" class="">
+      <div id="title-container">
+        <div id="blog-title"><h4>{{ site.title }}</h4></div>
+        <div id="rb-icon"><img src="assets/rb-logo.png"></div>
+      </div>
+      </a>
+    </div>
+    <div class="container">
+      {{ content }}
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

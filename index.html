@@ -13,10 +13,12 @@ title: Redbeacon Blog
         <div class="author-avatar">
           <img class="img-circle" title="{{ post.author }}" src="{{ post.author_avatar }}">
         </div>
-        <div class="word-count">{{ post.content | number_of_words }} words written</div>
-        <div class="author">by {{ post.author }}</div>
-        <div class="date">on {{ post.date | date_to_string}}</div>
-        <!--span class="tags">{{ tags | join: ', ' }}</span> | -->
+        <div class="extra">
+          <div class="word-count">{{ post.content | number_of_words }} words written</div>
+          <div class="author">by {{ post.author }}</div>
+          <div class="date">on {{ post.date | date_to_string}}</div>
+          <!--span class="tags">{{ tags | join: ', ' }}</span> | -->
+        </div>
       </div>
 
       <div>{{ post.excerpt }}</div>

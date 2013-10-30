@@ -3,9 +3,9 @@ lsi: false
 pygments: true
 markdown: redcarpet
 paginate: 10
-title: Redbeacon Product Engineering Blog
+title: product engineering blog
 #paginate_path: "blog/page:num"
-#permalink: /blog/:year/:month/:day/:title
+permalink: :year/:month/:day/:title
 redcarpet:
     extensions:
         - hard_wrap
