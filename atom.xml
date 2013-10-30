@@ -5,11 +5,11 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>Redbeacon Tech Blog</title>
+ <title>Redbeacon Product Engineering Blog</title>
  <link href="http://redbeacon.github.io/atom.xml" rel="self"/>
  <link href="http://redbeacon.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://redbeacon.com.com/</id>
+ <id>http://redbeacon.com/</id>
  <author>
    <name>Redbeacon Team</name>
    <email>support@redbeacon.com</email>
