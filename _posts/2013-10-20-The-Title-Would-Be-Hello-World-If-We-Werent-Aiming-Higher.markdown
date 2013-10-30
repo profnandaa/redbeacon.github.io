@@ -33,7 +33,7 @@ Since this is our first blog post, let us take you on a short tour to see around
 <img src="/assets/tardis.png">
 
 <p>
-Remember <a href="http://en.wikipedia.org/wiki/TARDIS" target="_blank">Dr. Who's TARDIS</a>? If not, it's just a simple box
+Remember the <a href="http://en.wikipedia.org/wiki/TARDIS" target="_blank">TARDIS</a> from Doctor Who? If not, it's just a simple box
 from outside that is actually a time machine and spacecraft that is <strong>way bigger</strong> from the inside, which is
 pretty much like Redbeacon.
 </p>
