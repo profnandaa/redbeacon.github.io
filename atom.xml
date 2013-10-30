@@ -21,7 +21,7 @@ layout: nil
    <link href="http://redbeacon.github.io{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>http://redbeacon.github.io{{ post.id }}</id>
-   <content type="html">{{ post.excerpt | xml_escape }}</content>
+   <content type="html">{{ post.excerpt }}</content>
  </entry>
  {% endfor %}
  
