@@ -7,4 +7,4 @@ uid=`id -u $USER`
 port=`expr 40000 + $uid`
 
 pkill -U $uid -f 'manage.py runserver'
-/opt/bin/jekyll serve --watch -P $port
+/opt/bin/jekyll serve --watch -P $port --baseurl=/blog/
