@@ -30,7 +30,7 @@ Since this is our first blog post, let us take you on a short tour to see around
 
 <h2>Wait, what is Redbeacon again?</h2>
 
-<img src="{{ site.baseurl }}/assets/images/tardis.png">
+<img src="{{ site.baseurl }}assets/images/tardis.png">
 
 <p>
 Remember the <a href="http://en.wikipedia.org/wiki/TARDIS" target="_blank">TARDIS</a> from Doctor Who? If not, it's just a simple box
@@ -49,10 +49,10 @@ Illustrations are always better than words:
 </p>
 
 <div>
-  <img src="{{ site.baseurl }}/assets/images/rb-1.jpg">
-  <img src="{{ site.baseurl }}/assets/images/rb-2.jpg">
-  <img src="{{ site.baseurl }}/assets/images/rb-3.jpg">
-  <img src="{{ site.baseurl }}/assets/images/rb-4.jpg">
+  <img src="{{ site.baseurl }}assets/images/rb-1.jpg">
+  <img src="{{ site.baseurl }}assets/images/rb-2.jpg">
+  <img src="{{ site.baseurl }}assets/images/rb-3.jpg">
+  <img src="{{ site.baseurl }}assets/images/rb-4.jpg">
   <div class="img-info">Illustrations by Gamze Karayilanoglu</div>
 </div>
 
@@ -125,7 +125,7 @@ Numbers are always fun (nerd alert). I've put some numbers together for seeing t
 
 <br>
 Having developers outside the US gives us the advantage of receiving commits every hour of the day, generating this incredible punchcard.<br>
-<img src="{{ site.baseurl }}/assets/images/punchcard.png">
+<img src="{{ site.baseurl }}assets/images/punchcard.png">
 </p>
 
 <p>
@@ -166,4 +166,4 @@ I think I'll stop writing at this point and save my words for another article. O
 SPOILER ALERT!!! Our next article will be about Database Deadlocks.
 </p>
 
-<img src="{{ site.baseurl }}/assets/images/cat-sees-the-end.jpg">
+<img src="{{ site.baseurl }}assets/images/cat-sees-the-end.jpg">
