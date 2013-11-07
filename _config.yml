@@ -5,8 +5,8 @@ markdown: redcarpet
 paginate: 10
 title: product engineering blog
 #paginate_path: "blog/page:num"
-version: 14
-permalink: :year/:month/:day/:title
+version: 15
+permalink: /:year/:month/:day/:title
 baseurl: /
 redcarpet:
     extensions:
