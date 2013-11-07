@@ -11,149 +11,123 @@ Writing QUnit is fun and very useful to keep your code future-proof, but sometim
 Let me show you an example of what I mean:
 
 {% highlight javascript %}
-    test('test with many async calls', function () {
+test('test with many async calls', function () {
+    strictEqual($('a.first-link').length, 1, 'There is link with a "first-link" class');
+    strictEqual($('#initialy-hidden-element').is(':visible'), false);
 
-        strictEqual($('a.first-link').length, 1, 'There is link with a "first-link" class');
-        strictEqual($('#initialy-hidden-element').is(':visible'), false);
+    // After clicking on the link, the hidden element will be faded in (3 seconds)
+    $('a.first-link').click();
 
-        // After clicking on the link, the hidden element will be faded in (3 seconds)
-        $('a.first-link').click();
+    stop();
+
+    _.delay(_.bind(function () {
+        start();
+
+        strictEqual($('#initialy-hidden-element').is(':visible'), true);
+        strictEqual($('a.second-link').length, 1, 'There is link with a "second-link" class');
+
+        // After clicking on the second link, a very expensive computation is done, so in
+        // order to not block the main thread, the code will call setTimeout(..., 0);
+        $('a.second-link').click();
 
         stop();
 
-        _.delay(_.bind(function () {
+        _.defer(_.bind(function () {
             start();
 
-            strictEqual($('#initialy-hidden-element').is(':visible'), true);
+            strictEqual($('#expensive-computation-result').text(), '3.1416');
+            strictEqual($('a.third-link').length, 1, 'There is link with a "third-link" class');
+            strictEqual($('#streched-element').width(), 10);
 
-            strictEqual($('a.second-link').length, 1, 'There is link with a "second-link" class');
-
-            // After clicking on the second link, a very expensive computation is done, so in
-            // order to not block the main thread, the code will call setTimeout(..., 0);
-            $('a.second-link').click();
+            // After clicking on the third link, there will be an animation
+            $('a.third-link').click();
 
             stop();
 
-            _.defer(_.bind(function () {
+            _.delay(_.bind(function () {
                 start();
-
-                strictEqual($('#expensive-computation-result').text(), '3.1416');
-
-                strictEqual($('a.third-link').length, 1, 'There is link with a "third-link" class');
-
-                strictEqual($('#streched-element').width(), 10);
-
-                // After clicking on the third link, there will be an animation
-                $('a.third-link').click();
-
-                stop();
-
-                _.delay(_.bind(function () {
-                    start();
-                    strictEqual($('#streched-element').width(), 500);
-
-                }, 5000, this);
-
-            }, this);
-
-        }, 3000, this));
-
-    });
+                strictEqual($('#streched-element').width(), 500);
+            }, 5000, this);
+        }, this);
+    }, 3000, this));
+});
 {% endhighlight %}
 
 As you can see, we have a serious stairway to hell syndrome here. There should be a better way to write this test. Something like this:
 
 {% highlight javascript %}
-    test('test with many async calls', function () {
+test('test with many async calls', function () {
+    strictEqual($('a.first-link').length, 1, 'There is link with a "first-link" class');
+    strictEqual($('#initialy-hidden-element').is(':visible'), false);
 
-        strictEqual($('a.first-link').length, 1, 'There is link with a "first-link" class');
-        strictEqual($('#initialy-hidden-element').is(':visible'), false);
+    // After clicking on the link, the hidden element will be faded in (3 seconds)
+    $('a.first-link').click();
 
-        // After clicking on the link, the hidden element will be faded in (3 seconds)
-        $('a.first-link').click();
+    var secondStep = createDelayedStep(function () {
+        strictEqual($('#initialy-hidden-element').is(':visible'), true);
+        strictEqual($('a.second-link').length, 1, 'There is link with a "second-link" class');
 
-        var secondStep = createDelayedStep(function () {
+        // After clicking on the second link, a very expensive computation is done so in
+        // order to not block the main thread, the code will call setTimeout(..., 0);
+        $('a.second-link').click();
+    }, 3000, this);
 
-            strictEqual($('#initialy-hidden-element').is(':visible'), true);
+    var thirdStep = createDeferredStep(function () {
+        strictEqual($('#expensive-computation-result').text(), '3.1416');
+        strictEqual($('a.third-link').length, 1, 'There is link with a "third-link" class');
+        strictEqual($('#streched-element').width(), 10);
 
-            strictEqual($('a.second-link').length, 1, 'There is link with a "second-link" class');
+        // After clicking on the third link there will be an animation
+        $('a.third-link').click();
+    }, this);
 
-            // After clicking on the second link, a very expensive computation is done so in
-            // order to not block the main thread, the code will call setTimeout(..., 0);
-            $('a.second-link').click();
+    var fourthStep = createDelayedStep(function () {
+        strictEqual($('#streched-element').width(), 500);
+    }, 5000, this);
 
-        }, 3000, this);
+    stop();
 
-        var thirdStep = createDeferredStep(function () {
-
-            strictEqual($('#expensive-computation-result').text(), '3.1416');
-
-            strictEqual($('a.third-link').length, 1, 'There is link with a "third-link" class');
-
-            strictEqual($('#streched-element').width(), 10);
-
-            // After clicking on the third link there will be an animation
-            $('a.third-link').click();
-
-        }, this);
-
-        var fourthStep = createDelayedStep(function () {
-
-            strictEqual($('#streched-element').width(), 500);
-
-        }, 5000, this);
-
-        stop();
-
-        secondStep()
-          .pipe(thirdStep)
-          .pipe(fourthStep)
-          .pipe(start);
-    });
+    secondStep()
+      .pipe(thirdStep)
+      .pipe(fourthStep)
+      .pipe(start);
+});
 {% endhighlight %}
 
 Now we just define steps and run them one after the other. All the magic is on the createDeferredStep and createDelayedStep functions. Let me show you:
 
 {% highlight javascript %}
-    var createDeferredStep = function (step, context) {
-        return function () {
-            var outterArguments = arguments;
-            var deferred = $.Deferred();
+var createDeferredStep = function (step, context) {
+    return function () {
+        var outterArguments = arguments;
+        var deferred = $.Deferred();
 
-            _.defer(_.bind(function () {
-                start();
+        _.defer(_.bind(function () {
+            start();
+            var result = step.apply(context, outterArguments);
+            stop();
+            deferred.resolve(result);
+        }, context));
 
-                var result = step.apply(context, outterArguments);
-
-                stop();
-
-                deferred.resolve(result);
-
-            }, context));
-
-            return deferred.promise();
-        };
+        return deferred.promise();
     };
+};
 
-    var createDelayedStep = function (step, delay, context) {
-        return function () {
-            var outterArguments = arguments;
-            var deferred = $.Deferred();
+var createDelayedStep = function (step, delay, context) {
+    return function () {
+        var outterArguments = arguments;
+        var deferred = $.Deferred();
 
-            _.delay(_.bind(function () {
-                start();
+        _.delay(_.bind(function () {
+            start();
+            var result = step.apply(context, outterArguments);
+            stop();
+            deferred.resolve(result);
+        }, context), delay);
 
-                var result = step.apply(context, outterArguments);
-
-                stop();
-
-                deferred.resolve(result);
-
-            }, context), delay);
-
-            return deferred.promise();
-        };
+        return deferred.promise();
     };
+};
 {% endhighlight %}
 
 As you can see we are using jQuery Deferred and Promises object to make our async steps run in serial. Each deferred will resolve with the result of the step function, which will be passed as an argument to the next step.
