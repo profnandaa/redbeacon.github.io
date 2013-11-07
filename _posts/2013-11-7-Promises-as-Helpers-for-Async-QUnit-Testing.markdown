@@ -12,10 +12,12 @@ Let me show you an example of what I mean:
 
 {% highlight javascript %}
 test('test with many async calls', function () {
-    strictEqual($('a.first-link').length, 1, 'There is link with a "first-link" class');
+    strictEqual($('a.first-link').length, 1,
+                'There is link with a "first-link" class');
     strictEqual($('#initialy-hidden-element').is(':visible'), false);
 
-    // After clicking on the link, the hidden element will be faded in (3 seconds)
+    // After clicking on the link, the hidden element
+    // will be faded in (3 seconds)
     $('a.first-link').click();
 
     stop();
@@ -24,10 +26,12 @@ test('test with many async calls', function () {
         start();
 
         strictEqual($('#initialy-hidden-element').is(':visible'), true);
-        strictEqual($('a.second-link').length, 1, 'There is link with a "second-link" class');
+        strictEqual($('a.second-link').length, 1,
+                    'There is link with a "second-link" class');
 
-        // After clicking on the second link, a very expensive computation is done, so in
-        // order to not block the main thread, the code will call setTimeout(..., 0);
+        // After clicking on the second link, a very expensive computation
+        //  is done, so in order to not block the main thread, the code
+        // will call setTimeout(..., 0);
         $('a.second-link').click();
 
         stop();
@@ -36,7 +40,8 @@ test('test with many async calls', function () {
             start();
 
             strictEqual($('#expensive-computation-result').text(), '3.1416');
-            strictEqual($('a.third-link').length, 1, 'There is link with a "third-link" class');
+            strictEqual($('a.third-link').length, 1,
+                        'There is link with a "third-link" class');
             strictEqual($('#streched-element').width(), 10);
 
             // After clicking on the third link, there will be an animation
@@ -57,7 +62,8 @@ As you can see, we have a serious stairway to hell syndrome here. There should b
 
 {% highlight javascript %}
 test('test with many async calls', function () {
-    strictEqual($('a.first-link').length, 1, 'There is link with a "first-link" class');
+    strictEqual($('a.first-link').length, 1,
+                'There is link with a "first-link" class');
     strictEqual($('#initialy-hidden-element').is(':visible'), false);
 
     // After clicking on the link, the hidden element will be faded in (3 seconds)
@@ -65,16 +71,19 @@ test('test with many async calls', function () {
 
     var secondStep = createDelayedStep(function () {
         strictEqual($('#initialy-hidden-element').is(':visible'), true);
-        strictEqual($('a.second-link').length, 1, 'There is link with a "second-link" class');
+        strictEqual($('a.second-link').length, 1,
+                      'There is link with a "second-link" class');
 
-        // After clicking on the second link, a very expensive computation is done so in
-        // order to not block the main thread, the code will call setTimeout(..., 0);
+        // After clicking on the second link, a very expensive computation
+        // is done so in order to not block the main thread, the code will
+        //  call setTimeout(..., 0);
         $('a.second-link').click();
     }, 3000, this);
 
     var thirdStep = createDeferredStep(function () {
         strictEqual($('#expensive-computation-result').text(), '3.1416');
-        strictEqual($('a.third-link').length, 1, 'There is link with a "third-link" class');
+        strictEqual($('a.third-link').length, 1,
+                    'There is link with a "third-link" class');
         strictEqual($('#streched-element').width(), 10);
 
         // After clicking on the third link there will be an animation
