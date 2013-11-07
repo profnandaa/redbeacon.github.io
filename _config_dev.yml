@@ -1,0 +1,17 @@
+safe: true
+lsi: false
+pygments: true
+markdown: redcarpet
+paginate: 10
+title: product engineering blog
+#paginate_path: "blog/page:num"
+version: 14
+permalink: /blog/:year/:month/:day/:title
+baseurl: /blog
+redcarpet:
+    extensions:
+        - hard_wrap
+        - no_intra_emphasis
+        - autolink
+        - strikethrough
+        - fenced_code_blocks
