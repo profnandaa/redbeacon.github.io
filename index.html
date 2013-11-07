@@ -6,7 +6,11 @@ title: Redbeacon Product Engineering Blog
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
   <div class="excerpt-container">
+    {% if site.baseurl != '/' %}
     <a href="{{ site.baseurl }}{{ post.url }}">
+    {% else %}
+    <a href="{{ post.url }}">
+    {% endif %}
       <h1 class="post-title">{{ post.title }}</h1>
 
       <div class="post-info">
