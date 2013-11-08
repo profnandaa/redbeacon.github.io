@@ -7,4 +7,4 @@ uid=`id -u $USER`
 port=`expr 40000 + $uid`
 
 pkill -U $uid -f '/opt/bin/jekyll serve'
-/opt/bin/jekyll serve --watch -P $port --baseurl=/blog/
+/opt/bin/jekyll serve --watch -P $port --baseurl=/blog/ --drafts --future
