@@ -126,7 +126,7 @@ This is an H2 title
 > This is an H2 title
 > -------------------
 
-Note again that we only use `H2` for titles and `H3` for sub titles and if you need one more level in `H4`.
+Note again that we only use `H2` for titles and `H3` for sub titles and if you need one more level use `H4`.
 
 
 ### Emphasis
@@ -161,7 +161,7 @@ Lets create a numberesd list where the items are not ordered correctly:
 3. Item 1
     5. Sub-item 1
         6. Sub-sub-item 1
-        4. Sub-sub-item 1
+        4. Sub-sub-item 2
     2. Sub-item 2
     3. Sub-item 3
 9. Item 2
@@ -172,7 +172,7 @@ Lets create a numberesd list where the items are not ordered correctly:
 > 3. Item 1
 >     5. Sub-item 1
 >         6. Sub-sub-item 1
->         4. Sub-sub-item 1
+>         4. Sub-sub-item 2
 >     2. Sub-item 2
 >     3. Sub-item 3
 > 9. Item 2
@@ -184,7 +184,7 @@ Lets create a numberesd list where the items are not ordered correctly:
 - Item 1
     - Sub-item 1
 - Item 2
-    - Sub-item 2
+    - Sub-item 1
         - Sub-sub-item 1
 - Item 3
 - Item 4
@@ -195,8 +195,9 @@ Lets create a numberesd list where the items are not ordered correctly:
 >
 > - Item 1
 >     - Sub-item 1
->         - Sub-sub-item 1
 > - Item 2
+>     - Sub-item 1
+>         - Sub-sub-item 1
 > - Item 3
 > - Item 4
 > - Item 5
@@ -248,7 +249,9 @@ They are written with a `>` in the beginning like:
 
 ### Code and Syntax Highlighting
 
-Your code tags will be parsed by the `Liquid Templating Engine` and colored by `pygments`. Pygments supports tons of languages. Here's an `HTML` example
+Your `highlight` tags will be parsed by the `Liquid Templating Engine` and colored by `pygments`. Pygments supports tons of languages.
+
+Here's an `HTML` example
 
     {% raw %}
     {% highlight html %}
