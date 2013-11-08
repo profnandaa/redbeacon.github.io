@@ -8,7 +8,7 @@ excerpt: "This article is for giving you a quick-start about writing and publish
 
 This article will give you a quick-start to how to write and publish your articles on `jekyll` using `markdown` and `liquid highlighter`. It will not be published on Github since it is in the `_drafts` directory, but will always be visible on your DEV server.
 
-I've written this article using markdown. Checkout the source code [here]() if you're interested. My first blog post was a hybrid that contains both markdown and html. You can see the source [here](/2013/10/20/The-Title-Would-Be-Hello-World-If-We-Werent-Aiming-Higher).
+I've written this article using markdown. Checkout the source code [here](https://raw.github.com/redbeacon/redbeacon.github.io/master/_drafts/2016-03-24-Hitchhiker's-Guide-to-Writing-Articles.markdown) if you're interested. My first blog post was a hybrid that contains both markdown and html. You can see the source [here](https://github.com/redbeacon/redbeacon.github.io/blob/master/_posts/2013-10-20-The-Title-Would-Be-Hello-World-If-We-Werent-Aiming-Higher.markdown).
 
 
 9 Easy Steps for Creating and Publishing Your Article
