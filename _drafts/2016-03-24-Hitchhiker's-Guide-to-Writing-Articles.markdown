@@ -86,7 +86,7 @@ The `markdown` equivalent is
 {% endraw %}
 {% endhighlight %}
 
-Note that we must **always** add `{{ site.baseurl }}` to the beginning of the link.
+Note that we must **always** add `{% raw %}{{ site.baseurl }}{% endraw %}` to the beginning of the link.
 
 ---
 
