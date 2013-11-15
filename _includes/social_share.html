@@ -1,13 +1,15 @@
 <div id="social-share">
   <div class="fb-share-button" data-type="button_count" data-href="{{ site.url }}{{ page.url }}"></div>
 
-  <a href="http://reddit.com/submit?url={{site.url}}{{ page.url }}&amp;title={{ page.title }}">
-    <img src="{{ site.baseurl }}assets/images/icons/reddit.png" title="Share on Reddit" alt="Reddit share button">
-  </a>
-
   <a href="http://news.ycombinator.com/submit" class="hn-share-button" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}">Vote on HN</a>
 
   <g:plus action="share" href="{{ site.url }}{{ page.url }}" annotation="bubble"></g:plus>
+
+  <script type="IN/Share" data-url="{{ site.url }}{{ page.url }}" data-counter="right"></script>
+
+    <a href="http://reddit.com/submit?url={{site.url}}{{ page.url }}&amp;title={{ page.title }}">
+    <img src="{{ site.baseurl }}assets/images/icons/reddit.png" title="Share on Reddit" alt="Reddit share button">
+  </a>
 
   <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-text="{{ page.title }}" data-via="redbeacon" data-hashtags="redbeacon" data-dnt="true">Tweet</a>
 

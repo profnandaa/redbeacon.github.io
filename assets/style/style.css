@@ -210,3 +210,7 @@ code, pre {
     vertical-align: middle !important; }
   #social-share .twitter-share-button {
     vertical-align: middle !important; }
+  #social-share .IN-widget {
+    line-height: 0px !important;
+    vertical-align: middle !important;
+    margin-top: 3px !important; }
