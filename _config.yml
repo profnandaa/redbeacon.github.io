@@ -8,6 +8,7 @@ title: product engineering blog
 version: 15
 permalink: :year/:month/:day/:title
 baseurl: /
+url: http://redbeacon.github.io
 redcarpet:
     extensions:
         - hard_wrap
