@@ -251,7 +251,7 @@ They are written with a `>` in the beginning like:
 
 Your `highlight` tags will be parsed by the `Liquid Templating Engine` and colored by `pygments`. Pygments supports tons of languages.
 
-Here's an `HTML` example
+iHere's an `HTML` example
 
     {% raw %}
     {% highlight html %}
