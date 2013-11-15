@@ -5,7 +5,7 @@ markdown: redcarpet
 paginate: 10
 title: product engineering blog
 #paginate_path: "blog/page:num"
-version: 17
+version: 18
 permalink: :year/:month/:day/:title
 baseurl: /
 url: http://redbeacon.github.io
