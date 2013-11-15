@@ -214,3 +214,5 @@ code, pre {
     line-height: 0px !important;
     vertical-align: middle !important;
     margin-top: 3px !important; }
+    #social-share .IN-widget * {
+      vertical-align: middle !important; }
