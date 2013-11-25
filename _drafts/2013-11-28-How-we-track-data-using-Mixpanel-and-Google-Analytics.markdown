@@ -74,7 +74,3 @@ Example usage of Mixpanel and Google Analytics
 **Question** Count of unique page views on the homepage for the month of October ?
 **Answer** *Google Analytics* gives this answer with no development effort and a few clicks.
 <img src="{{ site.baseurl }}assets/images/pageviews.png")>
-
-Conclusion
-----------
-This is our first blog post about how we track data and there will be follow up posts about how we track other data in our system.
