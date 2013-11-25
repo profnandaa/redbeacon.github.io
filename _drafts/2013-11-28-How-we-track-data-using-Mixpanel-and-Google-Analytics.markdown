@@ -5,9 +5,10 @@ author: Vinay Jain
 author_avatar: http://www.redbeacon.com/media/about/images/Vinay.jpg
 excerpt: "This article is an introduction to how we track data at Redbeacon and specifically how we track data using Mixpanel and Google analytics"
 ---
-This article is an introduction to how we track data at Redbeacon and specifically how we track certain data using *Mixpanel* and *Google analytics*
+This article is an introduction to how we track data at Redbeacon and specifically how we track certain data using *Mixpanel* and *Google analytics*.
 
-We at Redbeacon are constantly trying out new features and improvements in our core product and measuring these changes with some data points to understand the impact of them on our customers. We track and analyze all sorts of data like user events, site usage, mobile usage, job conversion funnel across various channels, system stats, backend service performance and application performance. Our goals for managing all this data are
+We at Redbeacon are constantly trying out new features and improvements in our core product and measuring these changes with some data points to understand the impact of them on our customers. We track and analyze all sorts of data like user events, site usage, mobile usage, job conversion funnel across various channels, system stats, backend service performance and application performance. Our goals for managing all this data are:
+
 - Cost and resource effectiveness
 - Easy to analyze and ask questions
 - Automated reporting and monitoring wherever possible
