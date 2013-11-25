@@ -20,7 +20,7 @@ For measuring our core metrics like site usage and conversion funnel we use *Mix
     <thead>
         <tr>
             <th></th>
-            <th><img src="{{ site.baseurl }}assets/images/mixpanel-logo.jpg")></th>
+            <th><img src="{{ site.baseurl }}assets/images/mixpanel-logo.png")></th>
             <th><img src="{{ site.baseurl }}assets/images/google-logo.png")></th>
         </tr>
     </thead>
