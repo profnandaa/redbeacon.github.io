@@ -3,28 +3,28 @@ layout: post
 title: "How we track data using Mixpanel and Google Analytics"
 author: Vinay Jain
 author_avatar: http://www.redbeacon.com/media/about/images/Vinay.jpg
-excerpt: "This article is an introduction to how we track data at Redbeacon and specifically how we track data using Mixpanel and Google Analytics"
+excerpt: "This article is an introduction to how we track data at Redbeacon and specifically how we track certain data using Mixpanel and Google Analytics."
 ---
-This article is an introduction to how we track data at Redbeacon and specifically how we track certain data using *Mixpanel* and *Google Analytics*.
+This article is an introduction to how we track data at Redbeacon and specifically how we track certain data using Mixpanel and Google Analytics.
 
-We at Redbeacon are constantly trying out new features and improvements in our core product and measuring these changes with some data points to understand the impact of them on our customers. We track and analyze all sorts of data like user events, site usage, mobile usage, job conversion funnel across various channels, system stats, backend service performance and application performance. Our goals for managing all this data are:
+We at Redbeacon are constantly trying out new features and improvements in our core product and measuring these changes with some data points to understand the impact on our customers. We track and analyze all sorts of data, such as user events, site usage, mobile usage, job-conversion funnels across various channels, system stats, backend service performance, and application performance. Our goals for managing all this data are:
 
 - Cost and resource effectiveness
 - Easy to analyze and ask questions
 - Automated reporting and monitoring wherever possible
 
 
-We believe *Mixpanel* and *Google Analytics* are very similar in functionality but are yet different in terms of features they are better at.
+We believe Mixpanel and Google Analytics are very similar in functionality but are yet different in terms of features at which they excel.
 
-**Mixpanel** is an *event* centric platform where tracking is not automated and is based of events. This works really well for certain event based analysis like below:
+**Mixpanel** is an *event-centric* platform where tracking is not automated and is based on events. This works really well for certain event-based analysis like below:
 
-*How did the new variant of homepage perform compared to the old one in terms of job request conversion ?*
+*How did the new variant of homepage perform compared to the old one in terms of job-request conversion?*
 <img src="{{ site.baseurl }}assets/images/homepage_test.png")>
 
 
-**Google Analytics** on the hand is feature rich and does a good job in tracking page views, site usage, link clicks in an automated manner but the trade off is the complexity it adds and loses the ease of use for certain parts of the product. We have used *Google Analytics* to perform some aggregated analysis like below:
+**Google Analytics** on the other hand is feature-rich and does a good job in tracking pageviews, site usage, and link clicks in an automated manner but the trade off is the complexity it adds, which loses the ease of use for certain parts of the product. We have used Google Analytics to perform some aggregated analysis like below:
 
-*Count of unique page views on the homepage for the month of October ?*
+*Count of unique page views on the homepage for the month of October?*
 <img src="{{ site.baseurl }}assets/images/pageviews.png")>
 
 Below is a simplistic comparison of the two tools in terms of features they provide and which tool worked better for us.
@@ -40,23 +40,23 @@ Below is a simplistic comparison of the two tools in terms of features they prov
     <tbody>
         <tr>
             <td>Page views across site</td>
-            <td>Manually fire events on page load for every page which is cumbersome and error prone</td>
+            <td>Manually fire events on page load for every page that is cumbersome and error-prone</td>
             <td>Automatically done via embedding the tracking code</td>
         </tr>
         <tr>
             <td>Funnel tracking</td>
-            <td>Tracking is event centric and easy to setup funnels</td>
+            <td>Tracking is event-centric and easy to set up funnels</td>
             <td>Setting up funnels is complex based on custom user events</td>
         </tr>
         <tr>
-            <td>Realtime event tracking</td>
-            <td>Live view for realtime events which makes QA and Engineering easy</td>
-            <td>Event tracking not displayed in realtime</td>
+            <td>Real-time event tracking</td>
+            <td>Live view for real-time events that makes QA and engineering easy</td>
+            <td>Event tracking not displayed in real time</td>
         </tr>
         <tr>
             <td>Querying for events</td>
             <td>Easy slicing and querying for events based on properties</td>
-            <td>Event filtering done via customs reports which are complex to setup</td>
+            <td>Event filtering done via customs reports that are complex to setup</td>
         </tr>
         <tr>
             <td>A/B testing</td>
@@ -66,12 +66,12 @@ Below is a simplistic comparison of the two tools in terms of features they prov
         <tr>
             <td>Link clicks tracking on a page</td>
             <td>Tough to do it in an automated way for changing pages</td>
-            <td>Automated site wide In page analytics based on urls</td>
+            <td>Automated site wide in-page analytics based on URLs</td>
         </tr>
         <tr>
             <td>Cost</td>
-            <td>Charged per data point so need to be careful about not wasting the quota</td>
-            <td>Free upto 10M data points a month</td>
+            <td>Charged per data point, so must be careful about not wasting the quota</td>
+            <td>Free up to 10M data points a month</td>
         </tr>
         <tr>
             <td>Support</td>
