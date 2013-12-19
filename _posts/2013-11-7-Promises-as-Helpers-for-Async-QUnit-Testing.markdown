@@ -2,7 +2,7 @@
 layout: post
 title: Promises as Helpers for Async QUnit Testing
 excerpt: "Writing QUnit is fun and very useful to keep your code future-proof, but sometimes you need to handle some hairy asynchronous flows and then your tests become hard to read."
-author_avatar: http://www.redbeacon.com/media/about/images/Dummy.jpg
+author_avatar: http://www.redbeacon.com/media/about/images/Lorenzo.jpg
 author: Lorenzo Gil
 ---
 
