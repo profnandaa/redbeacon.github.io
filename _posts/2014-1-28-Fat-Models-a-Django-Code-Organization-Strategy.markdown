@@ -12,7 +12,7 @@ Almost all Django code examples will lead you down a path of poor code organizat
 
 ## The Backstory – Redbeacon Builds Very Fast
 
-Product iteration at breakneck speed is part of the Redbeacon identity and history. The most intense era was a two-year period of insanely fast development – the year before our acquisition by the Home Depot and the year after. During that time, I knew an engineer who worked at a startup with a similar product scope, which iterated on their product at a similar lightening fast pace. That startup had twenty engineers; Redbeacon only had five. We were building very fast and with 4x efficiency.
+Product iteration at breakneck speed is part of the Redbeacon identity and history. The most intense era was a two-year period of insanely fast development – the year before our acquisition by the Home Depot and the year after. During that time, I knew an engineer who worked at a startup with a similar product scope, which iterated on their product at a similar lightning fast pace. That startup had twenty engineers; Redbeacon only had five. We were building very fast and with 4x efficiency.
 
 Most Django projects go through a short period of development and then into maintenance. Not us. Redbeacon's Django project has been in very active development for more than four years. Imagine that for a minute: For four years, we've been bolting stuff on to our Django codebase like an nine-armed carpenter monkey who drank a liter of coffee made with Red Bull.
 
