@@ -48,6 +48,8 @@ p {
   color: white; }
 
 #banner-minimal {
+  text-align: center;
+  color: white;
   height: 15px;
   background-color: #f96302;
   margin-bottom: 40px;
