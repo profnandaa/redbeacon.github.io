@@ -20,7 +20,7 @@ When you make as many changes to a codebase as rapidly as we have, your biggest 
 
 ## The MVCs of Django, A.K.A. MTV with a built-in C
 
-Have you ever tried to explain the Django MTV pattern to a Ruby on Rails developer? A lot of people will say that the templates are the views and the views the controllers. This is not true. The controller is the request/response/url-routing framework, which Django does for you. While the views are written by you to collect data to be presented in the templates. The templates and views together make up the presentation layer.
+Have you ever tried to explain the Django MTV pattern to a Ruby on Rails developer? A lot of people will say that the templates are the views and the views the controllers. This is not true. The controller is the request/response/url-routing framework, which Django does for you. The views are written by you to collect data to be presented in the templates. The templates and views together make up the presentation layer.
 
 There's a lot to like about Django's MTV pattern. It makes building simple-use-case applications easy. However, the MTV pattern leaves it unclear where processing and updating are supposed to live. Let's take a look a couple of potential homes for code that processes, updates, or that we just want to abstract out of the way to improve legibility.
 
