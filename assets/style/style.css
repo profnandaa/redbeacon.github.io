@@ -1,10 +1,11 @@
 body {
-  min-width: 380px;
   max-width: 100%; }
 
-html *, body * {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased; }
+html, body {
+  min-width: 320px !important; }
+  html *, body * {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Avenir-heavy", Helvetica, Arial, sans-serif !important;
@@ -63,11 +64,21 @@ p {
   height: 30px; }
 
 #title-container {
-  position: absolute;
   height: 50px;
-  right: 50px;
   bottom: 50px;
   background-color: rgba(0, 0, 0, 0.6); }
+  #title-container * {
+    font-size: 15px !important;
+    line-height: 24px; }
+    @media (min-width: 500px) {
+      #title-container * {
+        font-size: 18px !important; } }
+  @media (min-width: 500px) {
+    #title-container {
+      position: absolute;
+      right: 50px;
+      margin-left: 0px;
+      left: inherit; } }
   #title-container h4 {
     margin: 0px !important;
     padding: 0px !important;
@@ -79,16 +90,24 @@ p {
     height: 50px;
     background-color: #e7222f;
     text-align: center;
-    display: inline-block; }
+    display: inline-block;
+    float: left; }
+    @media (min-width: 500px) {
+      #title-container #rb-icon {
+        float: none; } }
     #title-container #rb-icon img {
       height: 40px;
       margin-left: -5px;
       margin-top: 4px; }
 
 #blog-title {
-  margin: 15px 10px 0px 14px;
+  margin: 15px 10px 0px 16px;
   display: inline-block;
   vertical-align: top; }
+  @media (min-width: 500px) {
+    #blog-title {
+      float: none;
+      margin: 15px 10px 0px 14px; } }
 
 .comments-title {
   text-decoration: none !important;

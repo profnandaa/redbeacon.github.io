@@ -1,12 +1,11 @@
 body
-  min-width: 380px
   max-width: 100%
 
 html, body
+  min-width: 320px !important
   *
     font-family: "Avenir", Helvetica, Arial, sans-serif
     -webkit-font-smoothing: antialiased
-
 
 h1, h2, h3, h4, h5, h6
   font-family: "Avenir-heavy", Helvetica, Arial, sans-serif !important
@@ -65,11 +64,23 @@ p
   height: 30px
 
 #title-container
-  position: absolute
+  *
+    font-size: 15px !important
+    line-height: 24px
+
+    @media (min-width: 500px)
+      font-size: 18px !important
+
   height: 50px
-  right: 50px
   bottom: 50px
   background-color: rgba(0,0,0,0.6)
+
+  @media (min-width: 500px)
+    position: absolute
+
+    right: 50px
+    margin-left: 0px
+    left: inherit
 
   h4
     margin: 0px !important
@@ -86,6 +97,10 @@ p
     background-color: #E7222F
     text-align: center
     display: inline-block
+    float: left
+
+    @media (min-width: 500px)
+      float: none
 
     img
       height: 40px
@@ -93,7 +108,11 @@ p
       margin-top: 4px
 
 #blog-title
-  margin: 15px 10px 0px 14px
+  @media (min-width: 500px)
+    float: none
+    margin: 15px 10px 0px 14px
+
+  margin: 15px 10px 0px 16px
   display: inline-block
   vertical-align: top
 
