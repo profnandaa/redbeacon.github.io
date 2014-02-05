@@ -5,13 +5,13 @@ author: Billy McCarthy
 author_avatar: http://www.redbeacon.com/media/about/images/Billy.jpg
 excerpt: "Just because you can fix it, doesn't mean you shouldn't rebuild it from scratch."
 ---
-Sometimes code needs to be taken out back and shot.
-Then it needs to be burned.
-Then the ashes need to be buried at an undisclosed location.
+> Sometimes code needs to be taken out back and shot.
+> Then it needs to be burned.
+> Then the ashes need to be buried at an undisclosed location.
 
-I took over responsibility for our Selenium test runner.  We use fabric to simply common tasks, such as running our Selenium tests.  The test runner was written by an engineer who had left the company by the time I started looking at his code and my boss was breathing down my neck to just fix 1 thing.  The system that I found was a fabric command which called a custom python script, which called nosetest to actually run the tests.
+I took over responsibility for our Selenium test runner.  We use fabric to simplify common tasks, such as running our Selenium tests.  The test runner was written by an engineer who had left the company by the time I started looking at his code and my boss was breathing down my neck to just fix 1 thing.  The system that I found was a fabric command which called a custom python script, which called nosetest to actually run the tests.
 
-Originally all of the tests were run using Sauce Labs' service.  It worked, but we had a limit of how many tests we could run at a time, which means every time we added a new test, the suite would take even longer to run.  It was pushing an hour just to give us a result.  The solution was to build a farm of Selenium servers that could run the tests for us.  We found that the farm was more fragile than Sauce Labs and sometimes would give use timeout errors.  The answer to this situation was to run the suite in our own farm, then retry any failing tests in Sauce.
+Originally all of the tests were run using Sauce Labs' service.  It worked, but we had a limit of how many tests we could run at a time, which means every time we added a new test, the suite would take even longer to run.  It was pushing an hour just to give us a result.  The solution was to build a farm of Selenium servers that could run the tests for us.  We found that the farm was more fragile than Sauce Labs and sometimes would give us timeout errors.  The answer to this situation was to run the suite in our own farm, then retry any failing tests in Sauce.
 
 This cut down on our run time, but our Sauce allocations were idle until the whole suite ran and I could parse the output to see which tests failed.  I was told to find a way to run the tests immediately after failure.  (This may be a good time to mention that I am the company's Sysadmin, so my way of thinking might be different from **real** engineers)  It turns out that both nosetest and fabric suppress output while things are running.  This makes for pretty reports, but makes finding out what's happening right now a bit of a pain.  Cue the Sysadmin and turn off all output suppression and use *tee* to print info both to the screen and to a temp file.  Now I could poll the output file, as well as give the user something to look at while things were running, and spawn a Sauce test as soon as the test failed in the farm.
 
