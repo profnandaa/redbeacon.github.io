@@ -11,7 +11,7 @@ excerpt: "Just because you can fix it, doesn't mean you shouldn't rebuild it fro
 
 This is the story of how I took over some old code, hacked it within an inch of its life, then gave it up for the greater good.
 
-I took over responsibility for our Selenium test runner.  We use Fabric to simplify common tasks, such as running our Selenium tests.  The test runner was written by an engineer who had left the company by the time I started looking at his code and my boss was breathing down my neck to just fix one thing.  The system that I found was a Fabric command, which called a custom python script, which called Nose to actually run the tests.
+Last year I took over responsibility for our Selenium test runner.  The test runner was originally written by an engineer who had left the company by the time I started looking at his code and my boss was breathing down my neck to just fix one thing.  The system that I found was a Fabric command, which called a custom Python script, which called Nose to actually run the tests.
 
 Originally all of the tests were run using Sauce Labs' service.  It worked, but we had a limit of how many tests we could run at a time, which meant every time we added a new test, the suite would take even longer to run.  It was pushing an hour just to give us a result.  The solution was to build a farm of Selenium servers that could run the tests for us.  We found that the farm was more fragile than Sauce Labs and sometimes would give us timeout errors.  The answer to this situation was to run the suite in our own farm, then retry any failing tests in Sauce.
 
