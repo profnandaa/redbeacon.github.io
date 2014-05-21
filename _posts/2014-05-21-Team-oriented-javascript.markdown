@@ -93,7 +93,7 @@ This is what you share with your team. At its simplest, it can be a single Javas
 
 ### Final thoughts
 
-As I said before there are some downsides to this, perhaps the most glaring one being that you need to commit extra time to write the adapters, or to delegate them to whoever will need to use your prototype later. We decided to live with this because if we follow this pattern. We won't have to do big rewrites later on, and we won't have the urge to duplicate code that has already been tested.
+As I said before there are some downsides to this, perhaps the most glaring one being that you need to commit extra time to write the adapters, or to delegate them to whoever will need to use your prototype later. We decided to live with this because if we follow this pattern we won't have to do big rewrites later on, and we won't have the urge to duplicate code that has already been tested.
 
 This is a really new concept for our team that solves a problem we face here every day. If this helps your team or you have suggestions on how to make this even better or even have other solutions, we would love to hear from you!
 
