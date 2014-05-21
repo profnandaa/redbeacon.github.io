@@ -6,13 +6,13 @@ author_avatar: http://www.redbeacon.com/media/about/images/Sean.jpg
 excerpt: "Share testable code across teams and implementations"
 ---
 
-At Redbeacon, we like the cutting edge, we like test coverage, and we like reusable code. Unfortunately, these three don't always play nice with each other. Each framework has its own test suite, and most of the time the code with test coverage is very attached to the framework we were using at the time of implementation. Refactoring these bits to play nice with the new framework is too time-consuming, so we hack a new version of the code that does the same thing but uses the new, modern framework. Now we have duplicate functionality and a hole in our tests that is being shadowed by the coverage of the original code.
+At Redbeacon, we like the cutting edge, we like test coverage, and we like reusable code. Unfortunately, these three don't always play nice with each other. Each framework has its own test suite, and most of the time the code with test coverage is very attached to the framework we were using at the time of implementation. Refactoring these bits to play nice with the new framework is too time-consuming, so we hack a new version of the code that does the same thing but uses the new, modern framework. Now we have duplicate functionality and a hole in our tests that is  overshadowed by the coverage of the original code.
 
 How can we avoid this pattern, especially as the team grows and takes on more projects? We surely don't want to use the framework we started with 4 years ago, and we don't want to rewrite our code base every 4 years. Design iteration adds even more complexity to this, as it's not unusual to update the design of page, rebrand, or tweak. More often than not, these involve changes in the business logic, which in turn requires changes in the code. 
 
 The solution we've come to is simple, sexy and elegant.
 
-I got to it when I was researching how commonly used libraries and frameworks package their Javascript. If you are familiar with the implementation of Bootstrap's jQuery plugins you'll see what I'm going for. For shared code, we use Javascript prototypes and group them with their dependencies, and the fewer dependencies the better. Along with these we add adapters that implement the 3rd party syntax around the original prototype. This way, as long as the prototype is well tested, the only place for errors is in the adapters, and those are caught by integration tests. The final result is the bundle, the packaged code that you can share across different projects and frameworks.
+I figured it out when I was researching how commonly used libraries and frameworks package their Javascript. If you are familiar with the implementation of Bootstrap's jQuery plugins, you'll see what I'm going for. For shared code, we use Javascript prototypes and group them with their dependencies, and the fewer dependencies the better. Along with these we add adapters that implement the 3rd-party syntax around the original prototype. This way, as long as the prototype is well tested, the only place for errors is in the adapters, and those are caught by integration tests. The final result is the bundle: the packaged code that you can share across different projects and implementations.
 
 Breaking this code apart is not easy, so I want to introduce 3 concepts: the prototype, the adapters, and the bundle. I'll go over these one by one:
 
@@ -39,6 +39,8 @@ User.prototype = {
 These guys are what makes your code shareable across different frameworks and products. Because all you are loading is standard Javascript, you can easily write an adapter layer with framework-specific syntax that uses the prototype above. I'll give you a couple examples:
 
 With Backbone.js:
+
+*Note*: This is a cumbersome syntax, and with some research, I could probably improve upon it.
 
 {% highlight Javascript %}
 var BackboneUserModel = Backbone.Model.extend({
