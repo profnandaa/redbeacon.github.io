@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Flaky Abstractions"
+title: "Weak Abstractions"
 author: Lorenzo Gil Sanchez
 author_avatar: http://www.redbeacon.com/media/about/images/Lorenzo.jpg
 excerpt: "Abstractions are a very powerful tool but they can also be traps if you don't understand them."
@@ -105,7 +105,7 @@ So you can see there is an extra INNER JOIN in query 5. Basically every time you
 
 Let's see what happens with real data. This is a table of all presidencies that started before 1900.
 
-<table class="table table-stripped">
+<table class="table table-striped">
   <theader>
     <tr>
         <th>ID</th>
@@ -322,7 +322,7 @@ Let's see what happens with real data. This is a table of all presidencies that 
 
 Now let's keep only the Democratic ones:
 
-<table class="table table-stripped">
+<table class="table table-striped">
   <theader>
     <tr>
         <th>ID</th>
