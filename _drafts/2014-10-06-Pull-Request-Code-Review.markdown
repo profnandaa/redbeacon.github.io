@@ -11,7 +11,7 @@ To work efficiently as a team, code review is a critical component of our develo
 Since Redbeacon is on Github, we use pull request to review the code before merging the branch to master. After using it for a few months, we create a flow that works well and we would like to share it with you.
 
 # Pull request
-We use pull request to conduct pre-commit code review, which means no code or pull request is merged to master without getting a review, in our development process. Also, it can be used to open a discussion and show the teammates the example of the code.
+We use pull request to conduct pre-merge code review, which means no code or pull request is merged to master without getting a review, in our development process. Also, it can be used to open a discussion and show the teammates the example of the code.
 
 When working on a task, it's better to think about how do you break it down and create multiple small pull requests rather than a huge pull request. Putting the bug fixes and new feature in a single pull request is definitely a bad idea. Sometimes it's just an instinct to pick up the bug when you're working on a feature. However, there might be some comments from the reviewers that you need to fix for the feature and the bug fix looks good. Since both of them are in the same pull request, the fix can't be merged to master until all the comments are fixed!
 
@@ -19,11 +19,11 @@ Now let's see what's the workflow and the requirements of a pull request:
 
 ## Workflow
 1. Create a pull request from your feature branch
-2. Make sure your pull request meet the [requirements](https://github.com/redbeacon/sunrise-ios/wiki/Pull-Request-and-Code-Review#requirements)
+2. Make sure your pull request meet the [requirements](#requirements)
 3. Communicate with reviewers and revise your code when needed
 4. Repeat 3. until the pull request is merged or closed
 
-## Requirements
+<h2 id="requirements">Requirements</h2>
 ### Summary
 It's very important that the reviewer can easily understand what's this pull request about and why the pull request is implemented in this way. All the information should be listed in either Asana (from product view point) or in pull request (from technical view point).
 
@@ -44,17 +44,17 @@ No one wants to waste time on reviewing the broken build or out-dated branch, so
 * **Cleaned-** If there is a change in resource, like new png files, it's better to clean the project and delete the app to make sure the new resource is in the bundle.
 
 # Code review
-* [What to do before you start reviewing the code?](https://github.com/redbeacon/sunrise-ios/wiki/Pull-Request-and-Code-Review#what-to-do-before-you-start-reviewing-the-code)
-* [What to do while you review the code?](https://github.com/redbeacon/sunrise-ios/wiki/Pull-Request-and-Code-Review#what-to-do-while-you-review-the-code)
-* [What you should pay attention to?](https://github.com/redbeacon/sunrise-ios/wiki/Pull-Request-and-Code-Review#what-you-should-pay-attention-to)
-* [What to do after you review the code?](https://github.com/redbeacon/sunrise-ios/wiki/Pull-Request-and-Code-Review#what-to-do-after-you-review-the-code)
+* [What to do before you start reviewing the code?](#what-to-do-before-you-start-reviewing-the-code)
+* [What to do while you review the code?](#what-to-do-while-you-review-the-code)
+* [What you should pay attention to?](#what-you-should-pay-attention-to)
+* [What to do after you review the code?](#what-to-do-after-you-review-the-code)
 
-## What to do before you start reviewing the code?
+<h2 id="what-to-do-before-you-start-reviewing-the-code">What to do before you start reviewing the code?</h2>
 
 ### Ensure the pull request is valid
 An invalid pull request is the one doesn't satisfy the requirement of a pull request. You can remind the creator that the pull request can't be reviewed because certain requirement is missing. However, it's definitely creator's responsibility to make sure the pull request is worth reviewer spending time on it.
 
-## What to do while you review the code?
+<h2 id="what-to-do-while-you-review-the-code">What to do while you review the code?</h2>
 
 ### Ask questions
 Don't be shy to ask questions. The team is here to help. If you're not clear about the task or not sure about the implementation, please feel free to ask questions. It's not a good idea to ignore the problem while you're doing the code review.
@@ -63,7 +63,7 @@ Leave a comment on the line of code that we should pay attention to. Most of the
 ### Give your teammate a thumb up
 Don't forget to praise your teammate when he/she does a good job in the pull request. We can always learn something from other people. Especially, we have a team with smart people.
 
-## What you should pay attention to?
+<h2 id="what-you-should-pay-attention-to">What you should pay attention to?</h2>
 
 In general, the pull request is going to be merged to master after a few runs of code reviews. We have to ensure that the code is good enough to go to production. The whole team takes the responsibility of getting rid of the smelly code and spreading good practice. Here are a few things that we should take into consideration when writing and reviewing the code.
 
@@ -101,7 +101,7 @@ UIKit should be used on main thread. The expensive/time-consuming operation shou
 ### Test coverage
 We should aim for 100% test coverage, so we are confident about changing the code without breaking other piece of the app. It will increase the productivity in the long run by avoiding manual testing.
 
-## What to do after you review the code?
+<h2 id="what-to-do-after-you-review-the-code">What to do after you review the code?</h2>
 
 * **Communicate with the creator -** If there are issues need to be addressed by the creator, please send the pull request back to the creator.
 * **Review it again -** Sometimes, reviewing the code once is not enough. We might have to go back and forth until we all satisfy with the pull request.
