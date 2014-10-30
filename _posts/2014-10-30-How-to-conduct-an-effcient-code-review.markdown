@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to conduct an effcient code review?"
+title: "How to conduct an efficient code review?"
 author: Yi-Wei Wu
 author_avatar: http://www.redbeacon.com/media/about/images/Yi-Wei.jpg
 excerpt: "Good code view process can help you build a better team that moves fast and delivers stable product. "
